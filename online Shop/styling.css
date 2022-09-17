@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100;200;300;400;500;600;700&display=swap');
+:root{
+    --firstColor:white;
+    --scoundColor:rgb(41, 41, 41);
+    --thirteColor:rgb(166, 166, 166);
+    --fourtheColor:rgb(24, 23, 23);
+    --priceColor: rgb(106, 106, 106);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+    
+}
+body{
+    height: 159vh;
+  
+}
+.center{
+    padding: 0 14%
+}
+a{
+    text-decoration: none;
+    color:var(--thirteColor)
+}
+.material-icons{
+    cursor: pointer;
+}
+
+/* ======================StartBar====================== */
+.startBar{
+    background-color: var(--scoundColor);
+    color: var(--thirteColor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    height: 30px;
+}
+.startBar a{
+    transition: 0.5s all;
+}
+.startBar a:hover{
+    color: var(--firstColor)
+}
+/* ____________left Of start barr____________ */
+.leftOfStartBar{
+    display: inline-flex;
+}
+.leftOfStartBar a{
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+.leftOfStartBar a:last-child::after{
+    content:"|";
+    padding:1px 10px;
+   
+}
+/* ____________left Of start barr____________ */
+.rightOfStartBar ul li{
+    list-style: none;
+    display: inline-block;
+}
+.rightOfStartBar ul li::after{
+    content: "|";
+    padding:0 10px;
+}
+.rightOfStartBar ul li:nth-last-child(1)::after{
+   content: "";
+}
+.rightOfStartBar ul li a{
+    text-transform: uppercase;
+}
+
+
+/* ======================MainBar====================== */
+.mainBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 10000;
+    background-color: var(--firstColor);
+    
+}
+/* ____________Logo____________ */
+
+.logo img{
+    width: 100px;
+}
+/* ____________Nav____________ */
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 25px 15px ;
+    position: relative;
+    text-align: center;
+    transition: 0.5s all;
+   
+}
+nav ul li:hover{
+    background-color: rgb(238, 238, 238);
+    
+}
+nav ul li a{
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 3px;
+}
+nav ul li a:hover{
+    color:rgb(152, 159, 165)
+}
+nav ul li:first-child a:after{
+    content:"";
+    padding:1px 50%;
+    background-color: var(--fourtheColor);
+    border-radius: 12px;
+    position: absolute;
+    left:0;
+    bottom:0;
+}
+
+
+/* ____________icons Contianer____________ */
+.iconContianer{
+    display: flex;
+    justify-content: end;
+    position: relative;
+    padding:0 2%;
+}
+.iconContianer i{
+    font-size: 2rem;
+    padding-right: 10px;
+}
+.iconContianer i:nth-child(2){
+
+    transform: rotatey(180deg);
+}
+
+/* ======================Main of The Head======================  */
+
+.MainOfHead{
+    background: url(bg-1-1.png);
+    background-size: cover;
+    width: 100%;
+    padding: 0 -12%;
+    height: 578px;
+    position: relative;
+    color: var(--firstColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: BackgroundImg 2s linear ;
+    padding-top: 40px;
+   
+}
+.MainOfHead p{
+    font-size:1.4rem ;
+    text-transform: uppercase;
+    animation: TheJacke 1s linear forwards;
+    animation-delay: 2s;
+    opacity: 0;
+}
+.MainOfHead h3{
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    margin:20px 0;
+    animation: Collection 1s linear forwards;
+    animation-delay: 2s;
+    opacity: 0;
+}
+.MainOfHead button{
+    margin-top: 20px;
+    outline: none;
+    background: transparent;
+    padding: 12px 0 ;
+    width: 150px;
+    color: var(--firstColor);
+    border:1px solid var(--firstColor);
+    cursor: pointer;
+    text-transform: uppercase;
+    animation: ShopNow 1s linear forwards;
+    animation-delay: 4s;
+    opacity: 0;
+    font-size: 1.2rem
+}
+/* ____________icons____________ */
+.MainOfHead .material-icons{
+    position: absolute;
+    font-size: 1.7rem;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+}
+.MainOfHead .material-icons:hover{
+    transform: scale(1.2);
+}
+.MainOfHead .material-icons:nth-last-child(1){
+    right: 20px;
+}
+.MainOfHead .material-icons:nth-last-child(2){
+    left: 20px;
+}
+/* ____________ animation of main of head____________ */
+@keyframes BackgroundImg{
+    0%{
+      opacity: 0;  
+    }
+    100%{
+      opacity: 1;  
+    }
+}
+@keyframes Collection{
+    0%{
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes TheJacke{
+    0%{
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes ShopNow{
+    0%{
+        transform: translateY(200px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* ======================Trending CLOTHES====================== */
+.firstCollection{
+  margin: 40px 0 ;
+
+}
+.firstCollection .CollectionTitel{
+    position: relative;
+    text-transform: uppercase;
+    margin-bottom:70px;
+}
+
+.firstCollection .CollectionTitel::after{
+    content: "";
+    background-color: var(--fourtheColor);
+    padding: 1px 8px;
+    position: absolute;
+    margin-top:15px
+}
+.firstCollection .CollectionTitel p{
+    color: var(--thirteColor);
+    margin-top: 8px
+}
+/*  ____________COLLECTION PRODUCT____________  */
+.CollectionProduct{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+
+}
+.CollectionProduct .product{
+    margin:10px 0;
+    min-width: 150px;
+    position: relative;
+    cursor: pointer;
+} 
+.CollectionProduct .product .favorite{
+    position: absolute;
+    top:4%;
+    left: 4%;
+    display: none;
+    transition:  all 0.5s;
+    color: var(--scoundColor);
+}
+.CollectionProduct .product:hover .favorite{
+    display: block;
+}
+.CollectionProduct .product .Productimg{
+    width: 100%;
+}
+.CollectionProduct .product .Productimg img{
+    width: 100%;
+}
+
+.CollectionProduct .product .ProductText{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    margin-top:10px;
+    padding: 0 10px;
+}
+.CollectionProduct .product .ProductText h4{
+    color: var(--priceColor);
+    font-size: 1.2rem;
+    margin-top:12px;
+    font-weight: normal;
+}
+.CollectionProduct .product .ProductText .ProudctCatigory{
+    color:var(--thirteColor);
+    margin: 10px 0;
+    font-size:0.7rem
+    
+}
+.CollectionProduct .product .ProductText i{
+    position: absolute;
+    right: 0;
+    bottom: 17%;
+    font-size: 1.5rem;
+}
+.CollectionProduct .product .price{
+    Margin-top: 20px;
+    font-size: 1.5rem;
+    color: var(--priceColor);
+    text-align: left;
+    
+}
+/* ======================ProductCatigorys====================== - */
+.ProductCatigorys{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin: 150px 0;
+}
+
+.Catigory{
+    position: relative;
+    transition: 0.5s all;
+    max-width:400px ;
+   
+}
+.Catigory .imgCatigory{
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s all;
+    cursor: pointer;
+   
+}
+.Catigory .imgCatigory::after{
+    content: "";
+    background-color: rgba(0, 0, 0, 0.301);
+    position: absolute;
+    padding: 100px;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+.Catigory:hover {
+    transform: scale(1.05);
+}
+
+.Catigory .catigoryName{
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    color:var(--firstColor);
+    text-align: center;
+    background-color: transparent;
+    border: 2px var(--firstColor) solid;
+    width: max-content;
+    margin: auto;
+    padding: 12px;
+    border-bottom: double 10px var(--firstColor);
+    border-top: double 10px var(--firstColor);
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+/* ======================ProductCatigorys====================== */
+
+.shippinginfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    border: double rgb(233, 233, 233) 1px;
+    padding: 25px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+.shippinginfo .shippingtext{
+    margin-left: 50px;
+}
+.shippinginfo .shippingtext h4{
+    padding-bottom: 20px;
+    font-size: 1.6rem;
+    color: var(--scoundColor)
+}
+.shippinginfo .shippingtext p{
+    color: var(--thirteColor);
+}
+.shippinginfo  button{
+    background-color: black;
+    padding: 10px;
+    outline: none;
+    color: var(--firstColor);
+    text-transform: uppercase;
+    border:none;
+}
+/* ======================Bestsellers====================== */
+/* ======================Productsuggestions====================== */
+.Productsuggestions{
+    display: flex;
+    justify-content: space-around
+}
+.Productsuggestions .Suggestion-col{
+    
+    text-align: center;
+    
+}
+.Productsuggestions .product{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    min-width: 200px;
+    align-items: center; 
+    box-shadow: 0 0 1px var(--thirteColor); 
+     
+}
+ .Productsuggestions .product img{
+    width: 50px;
+    border-radius: 50%;
+}
+
+/* ======================our partner====================== */
+.partner{
+    display: flex;
+    justify-content:space-between;
+    align-items:center
+}
+.partner IMG{
+    width: 12%;
+}
+/* ======================footer====================== */
+footer{
+    background-color: var(--scoundColor);
+    color: var(--firstColor)
+}
+/* ======================listcontianer====================== */
+
+.listcontianer{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px var(--thirteColor) solid;
+}
+
+
+
+.nav-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    margin-top: 50px 
+}
